@@ -1,0 +1,139 @@
+<div id="wrapper">
+    <h1>Have you the following resources?</h1>
+    <p>Take this questionnaire to find out!</p>
+
+    <form id="quiz">
+        <!-- Question 1 -->
+        <h2>Do you have the following templates completed?</h2>
+        <!-- Here are the choices for the first question. Each input tag must have the same name. For this question, the name is q1. -->
+        <!-- The value is which answer the choice corresponds to. -->
+        <label><input type="checkbox" name="q1" value="c1">
+            GPR Readiness Assessment?
+        </label><br />
+        <label><input type="checkbox" name="q1" value="c2">
+           Document Controller Spreadsheet
+        </label><br />
+
+
+        <!-- Question 2 -->
+        <h2>Do you have a response in place or professinal documents to respond?</h2>
+        <!-- Here are the choices for the second question. Notice how each input tag has the same name (q2), but a different name than the previous question. -->
+        <label><input type="checkbox" name="q2" value="c1">
+           General Data Protection Notice
+        </label><br />
+        <label><input type="checkbox" name="q2" value="c2">
+            Data Protection Officer Job description?
+        </label><br />
+        <label><input type="checkbox" name="q2" value="c3">
+           Appointment Data Officer Letter
+        </label><br />
+        <label><input type="checkbox" name="q2" value="c4">
+            None of the above
+        </label><br />
+
+        <!-- Question 3 -->
+        <h2>Have you completed the following?</h2>
+        <!-- Here are the choices for the second question. Notice how each input tag has the same name (q2), but a different name than the previous question. -->
+        <label><input type="checkbox" name="q2" value="c1">
+            Data Audit
+        </label><br />
+        <label><input type="checkbox" name="q2" value="c2">
+            Appendix Iso27001 Internal Audit Checklist
+        </label><br />
+        <label><input type="checkbox" name="q2" value="c3">
+            Data Protection Policy White Paper
+        </label><br />
+        <label><input type="checkbox" name="q2" value="c4">
+            Internal Audit Procedure
+        </label><br />
+        <label><input type="checkbox" name="q2" value="c2">
+            Information Assets For Disposal Log
+        </label><br />
+        <!-- Question 4 -->
+        <h2>Do you have procedures for Privacy policies and notices</h2>
+        <!-- Here are the choices for the second question. Notice how each input tag has the same name (q2), but a different name than the previous question. -->
+        <label><input type="checkbox" name="q2" value="c1">
+            Data Retention Policy
+        </label><br />
+        <label><input type="checkbox" name="q2" value="c2">
+            Privacy policy
+        </label><br />
+        <label><input type="checkbox" name="q2" value="c3">
+            Agreeing by email
+        </label><br />
+        <label><input type="checkbox" name="q2" value="c4">
+            Data Subject Consent Form
+        </label><br />
+        <label><input type="checkbox" name="q2" value="c4">
+            Parental Consent Form
+        </label><br />
+        <label><input type="checkbox" name="q2" value="c4">
+            None of the above
+        </label><br />
+        <!-- Question 5 -->
+        <h2>If you get a Data Request have you the following resources?</h2>
+        <!-- Choices for the third question -->
+        <label><input type="checkbox" name="q3" value="c1">
+            Data Subject Change Request Form
+        </label><br />
+        <label><input type="checkbox" name="q3" value="c2">
+            Data Subject Consent Withdrawal Form
+        </label><br />
+        <label><input type="checkbox" name="q3" value="c3">
+            Parental Consent Withdrawal Form
+        </label><br />
+        <label><input type="checkbox" name="q3" value="c4">
+            Data Subject Access Request Procedure
+        </label><br />
+        <label><input type="checkbox" name="q3" value="c4">
+            User Data Deletion Request Form
+        </label>
+        <label><input type="checkbox" name="q3" value="c4">
+            Data Subject Access Request Form
+        </label><br />
+        <label><input type="checkbox" name="q3" value="c4">
+            None of the above
+        </label><br />
+        <!-- Question 6 -->
+        <h2>Have you the following in place in case of a Data Breach?</h2>
+        <!-- Choices for the fourth question -->
+        <label><input type="checkbox" name="q4" value="c1">
+           Data Breach Response Notification Procedure
+        </label><br />
+        <label><input type="checkbox" name="q4" value="c2">
+            Data Breach Register
+        </label><br />
+        <label><input type="checkbox" name="q4" value="c3">
+             Breach Report
+        </label><br />
+        <label><input type="checkbox" name="q4" value="c4">
+        Breach Notification To Supervisory Authority
+    </label><br />
+        <label><input type="checkbox" name="q4" value="c4">
+            Disaster plan
+        </label><br />
+        <label><input type="checkbox" name="q4" value="c4">
+            Breach Notification To Data Subjects
+        </label><br />
+        <label><input type="checkbox" name="q4" value="c4">
+           None of the above
+        </label><br />
+        <!-- Question 7 -->
+        <h2>If you receive a complaint can you respond to it?</h2>
+        <!-- Choices for the fourth question -->
+        <label><input type="checkbox" name="q4" value="c1">
+          Do you have a Data Breach Response Notification Procedure
+        </label><br />
+        <label><input type="checkbox" name="q4" value="c2">
+        Yes I have a Privacy Complaint Response Letter
+    </label><br />
+        <label><input type="checkbox" name="q4" value="c2">
+            I have no such document
+        </label><br />
+        <button type="submit" id="submit" onclick="tabulateAnswers()">Submit Your Answers</button>
+        <button type="reset" id="reset" onclick="resetAnswer()">Reset</button>
+    </form>
+
+
+    <div id="answer">Your result will show up here!</div>
+</div>

@@ -6,7 +6,6 @@ import lombok.Setter;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import javax.persistence.*;
-
 // import org.springframework.security.core.GrantedAuthority;
 // import org.springframework.security.core.userdetails.UserDetails;
 
@@ -18,6 +17,8 @@ public class User extends Person {
 
 
     private String userName;
+    //@NotBlank
+    //@Size(max = 120)
     private String password;
 
    public User(String firstName, String lastName){

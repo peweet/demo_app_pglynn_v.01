@@ -11,4 +11,16 @@ public class IndexController {
     public String index(){
         return "index";
     }
+
+    @RequestMapping({"/survey"})
+    public String question(){
+        return "questionnaire";
+    }
+
+    @RequestMapping({"/larger_survey"})
+    public String deep_questionnaire(){
+        return "in_depth_questionnaire";
+    }
 }
+
+
