@@ -5,41 +5,47 @@ import com.app.project_pglynn.v01.demo.repositories.UserRepository;
 import com.app.project_pglynn.v01.demo.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 import static java.util.Collections.emptyList;
 @Service
-public class UserServiceImplementation implements UserService {
+//UserDetails
+public class UserServiceImplementation implements UserDetailsService {
     @Autowired
     private UserRepository userRepository;
 
     public UserServiceImplementation(UserRepository userRepository){
+
         this.userRepository = userRepository;
     }
 
-    @Override
+   // @Override
     public Set<User> findAll() {
         return (Set<User>) userRepository.findAll();
     }
 
-    @Override
+
     public User findById(Long id) {
         return null; //userRepository.findById(id);
     }
 
-    @Override
+   // @Override
     public User save(User user) {
         return userRepository.save(user);
     }
 
-    @Override
+    //@Override
     public void delete(User user) {
          userRepository.delete(user);
     }
-/*   @Override
-    public User loadUserByUsername(String username) throws UsernameNotFoundException {
+
+    //@Override
+    public User findUserByUsername(String username) throws UsernameNotFoundException {
         User user = userRepository.findByUserName(username);
         if (user == null) {
             throw new UsernameNotFoundException(username);
@@ -47,5 +53,10 @@ public class UserServiceImplementation implements UserService {
         return new User(user.getUsername(), user.getPassword());
     }
 
- */
+    @Override
+    public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
+        return null;
+    }
+
+// */
 }

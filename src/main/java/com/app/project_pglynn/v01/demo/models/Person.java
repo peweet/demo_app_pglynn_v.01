@@ -14,11 +14,12 @@ import javax.persistence.Table;
 @Table(name ="people")
 public abstract class Person extends BaseEntity {
 
-    @Column(name = "first_name")
+    @Column(name = "FIRST_NAME", nullable = false)
     private String firstName;
 
-    @Column(name = "last_name")
+    @Column(name = "LAST_NAME", nullable = false)
     private String lastName;
+
 
     protected Person(String firstName, String lastName) {
         this.firstName = firstName;

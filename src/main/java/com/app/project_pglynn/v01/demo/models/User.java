@@ -15,10 +15,11 @@ import javax.persistence.*;
 @Table(name ="users")
 public class User extends Person {
 
-
+    @Column(name="USERNAME", nullable = false, unique = true)
     private String userName;
     //@NotBlank
     //@Size(max = 120)
+    @Column(name="PASSWORD", nullable = false)
     private String password;
 
    public User(String firstName, String lastName){
